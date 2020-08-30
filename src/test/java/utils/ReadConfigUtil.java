@@ -1,20 +1,21 @@
 package test.java.utils;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.logging.Logger;
 
 public class ReadConfigUtil {
 
-    private static final Logger log = Logger.getLogger(String.valueOf(ReadConfigUtil.class));
     private static final Properties prop;
+    private static FileInputStream fis;
 
     static {
         prop = new Properties();
         try {
-            prop.load(ReadConfigUtil.class.getClassLoader().getResourceAsStream("/config.properties"));
+            fis = new FileInputStream("src/test/java/resources/config.properties");
+            prop.load(fis);
         } catch (IOException e) {
-//            log.error(e);
+
         }
     }
 
