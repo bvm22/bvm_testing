@@ -23,7 +23,6 @@ public class YandexImageSearchResult extends Page {
     public void checkBullits(Image image){
         int count = 0;
         for(WebElement element : bullits){
-            System.out.println(element.getText());
             if (element.getText().contains(image.getName())){
                 count++;
             }
