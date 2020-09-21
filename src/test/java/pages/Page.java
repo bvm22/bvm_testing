@@ -1,8 +1,11 @@
-package test.java.pages;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+/**
+ * Класс родитель для всех страниц
+ * */
 public class Page {
 
     protected WebDriver driver;

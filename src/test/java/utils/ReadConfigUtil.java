@@ -1,4 +1,4 @@
-package test.java.utils;
+package utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,7 +15,7 @@ public class ReadConfigUtil {
             fis = new FileInputStream("src/test/java/resources/config.properties");
             prop.load(fis);
         } catch (IOException e) {
-
+            e.printStackTrace();
         }
     }
 
@@ -29,7 +29,4 @@ public class ReadConfigUtil {
         return prop.getProperty(value);
     }
 
-    public synchronized static String getValueFromConfig(String value, String def) {
-        return prop.getProperty(value, def);
-    }
 }

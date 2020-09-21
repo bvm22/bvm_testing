@@ -1,10 +1,12 @@
-package test.java.utils;
+package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import static test.java.tests.MainTest.PATH_TO_CHROME_DRIVER;
+import java.util.concurrent.TimeUnit;
+
+import static tests.MainTest.PATH_TO_CHROME_DRIVER;
 
 /**
  * класс для распаковки в проекте WebDriver
@@ -22,6 +24,7 @@ public class ChromeDriverUtil {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-extensions");
         driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return driver;
 
     }

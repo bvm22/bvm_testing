@@ -1,10 +1,10 @@
-package test.java.tests;
+package tests;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.After;
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
-import test.java.utils.ChromeDriverUtil;
-import test.java.utils.ReadConfigUtil;
+import utils.ChromeDriverUtil;
+import utils.ReadConfigUtil;
 
 public class MainTest {
 
@@ -12,19 +12,20 @@ public class MainTest {
 
     protected WebDriver driver;
 
-    @BeforeEach
+    @Before
     public void started(){
         driver = ChromeDriverUtil.startChromeDriver();
+        driver.get("https://yandex.ru/");
     }
 
-    @AfterEach
+    @After
     public void finished(){
         try {
             if (driver != null) {
                 driver.quit();
             }
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 
