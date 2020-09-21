@@ -1,6 +1,6 @@
 package utils;
 
-import test.java.testData.Image;
+import testData.Image;
 
 import java.io.File;
 import java.util.ArrayList;

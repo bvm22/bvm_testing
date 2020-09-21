@@ -1,4 +1,4 @@
-package test.java.testData;
+package testData;
 
 import java.io.File;
 

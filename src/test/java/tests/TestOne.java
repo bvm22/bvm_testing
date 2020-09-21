@@ -6,7 +6,7 @@ import org.junit.Test;
 import pages.YandexImageSearchResult;
 import pages.YandexImagesPage;
 import pages.YandexMainPage;
-import test.java.testData.Image;
+import testData.Image;
 import utils.GeneratorTestData;
 import utils.Helper;
 
