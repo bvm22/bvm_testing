@@ -26,8 +26,8 @@ public class YandexImageSearchResult extends Page {
             if (element.getText().contains(image.getName())){
                 count++;
             }
-            Assert.assertTrue(count>0);
         }
+        Assert.assertTrue(count>0);
     }
 
 }
